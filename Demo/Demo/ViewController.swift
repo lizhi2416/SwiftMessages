@@ -72,6 +72,7 @@ class ViewController: UITableViewController {
         warning.button?.isHidden = true
         var warningConfig = SwiftMessages.defaultConfig
         warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+        warningConfig.needSystemAlert = true
 
         let success = MessageView.viewFromNib(layout: .cardView)
         success.configureTheme(.success)

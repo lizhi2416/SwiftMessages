@@ -272,6 +272,9 @@ open class SwiftMessages {
         */
         public var interactiveHide = true
         
+        /// 是否需要响铃或者振动提示
+        public var needSystemAlert = false
+        
         /**
          Specifies the preferred status bar style when the view is being
          displayed in a window. This can be useful when the view is being

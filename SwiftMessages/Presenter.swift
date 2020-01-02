@@ -127,6 +127,13 @@ class Presenter: NSObject {
     func show(completion: @escaping AnimationCompletion) throws {
         try presentationContext = getPresentationContext()
         install()
+        
+        if self.config.needSystemAlert {
+            LXMuteDetector.shareInstance.detectComplete { (isMute) in
+                LXMuteDetector.playSyatemAlert(isMute)
+            }
+        }
+        
         self.config.eventListeners.forEach { $0(.willShow) }
         showAnimation() { completed in
             completion(completed)
