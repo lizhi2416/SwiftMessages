@@ -1,6 +1,97 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 9.0.5
+
+### Fixes
+
+* #482 Fix timing of `KeyboardTrackingView` callbacks.
+* #483 KeyboardTrackingView causes a small space under bottom-style view
+
+## 9.0.4
+
+* #471 Xcode 13 issue - Enum cases with associated values cannot be marked potentially unavailable with '@available'
+* Improve colors for dark mode.
+
+## 9.0.3
+
+### Fixes
+
+* #467 Lower or equal level window's views disappear upon hide
+* #466 Alert not shown after Biometry check
+* #465 Fix broken Carthage build. The Carthage build was broken due to the `iMessageDemo` project's use of CocoaPods and the automatically generated `SwiftMessages` framework scheme created by CocoaPods. The podfile was modified to delete this scheme, but Carthage users may need to run `pod install` on the `iMessagesDemo` project, if they have CocoaPods installed, or manually delete the `iMessageDemo/Pods/Pods.xcodeproj/xcuserdata` folder.
+
+## 9.0.2
+
+### Fixes
+
+* Fix app extension compile error when using CocoaPods.
+
+## 9.0.1
+
+### Fixes
+
+* #455 #458 Restore key window after message is interacted with. When a message becomes the key window, such as if the user interacts with the message, iOS does not automatically restore the previous key window when the message is dismissed. SwiftMessages has some logic in `WindowViewController` to restore the key window. This change makes that logic more robust.
+
+## 9.0.0
+
+### Features
+
+* #447 Add the ability to show view controller in a new window with `SwiftMessagesSegue`.
+This capability is available when using `SwiftMessagesSegue` programmatically by supplying
+an instance of `WindowViewController` as the segue's source view controller.
+
+### Changes
+
+* This release has minor breaking changes in the `WindowViewController` initializers.
+The `windowLevel` is no longer accepted as an argument because the `config` parameter
+should specify the window level in the `presentationContext` property.
+
+### Fixes
+
+* #451 Fix app extension crash
+
+## 8.0.5
+
+### Fixes
+
+* #446 Restore previous key window on dismissal if the message assumed key window status.
+
+## 8.0.4
+
+### Features
+
+* #442 Add `MarginAdjustable.respectSafeArea` option to exclude safe area from layout margins.
+* #430 Support disable `becomeKeyWindow` from SwiftMessages.Config. This is a workaround for potential issues with apps that display additional windows.
+
+### Fixes
+
+* #437 Revert to explicitly specifying "SwiftMessages" as the module in nib files.
+* #440 Fix crash when using SwiftMessages in app extension
+
+## 8.0.3
+
+### Features
+
+* Full support for Swift Package Manager
+
+### Fixes
+
+* #328 ignoreDuplicates is not working
+* #412 Fix deployment target on nib files to match target
+
+## 8.0.2
+
+### Changes
+
+* [#395](https://github.com/SwiftKickMobile/SwiftMessages/pull/395) Add preliminary support for Swift Package Manager.
+
+## 8.0.1
+
+### Fixes
+
+* #401 UIAlertController pops up but SwiftMessage layer absorbs all touches.
+
 ## 8.0.0
 
 ### Changes
@@ -13,6 +104,11 @@ All notable changes to this project will be documented in this file.
 ### Fixes
 
 * #365 Fix an issue with customized `TopBottomAnimation` where messages weren't properly displayed under navigation and tab bars.
+* #352 Fix accessibility for view controllers presented with `SwiftMessagesSegue`.
+* #355 Update card view layout to support centering of pure textual content 
+* #354 Support `overrideUserInterfaceStyle` when view presented in its own window
+* #360 Fix touch handing issue in iOS 13.1.3
+* #382 Fix warnings in Xcode 11.4
 
 ## 7.0.1
 

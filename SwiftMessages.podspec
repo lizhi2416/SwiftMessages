@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name             = 'SwiftMessages'
-    spec.version          = '7.0.1'
+    spec.version          = '9.0.5'
     spec.license          = { :type => 'MIT' }
     spec.homepage         = 'https://github.com/SwiftKickMobile/SwiftMessages'
     spec.authors          = { 'Timothy Moose' => 'tim@swiftkick.it' }
@@ -15,13 +15,13 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'App' do |app|
         app.source_files = 'SwiftMessages/**/*.swift'
-        app.resource_bundles = {'SwiftMessages' => ['SwiftMessages/Resources/**/*']}
+        app.resource_bundles = {'SwiftMessages' => ['SwiftMessages/Resources/*.*']}
     end
 
     spec.subspec 'AppExtension' do |ext|
         ext.source_files  = 'SwiftMessages/**/*.swift'
         ext.exclude_files = 'SwiftMessages/**/SegueConvenienceClasses.swift'
-        ext.resource_bundles = {'SwiftMessages' => ['SwiftMessages/Resources/**/*']}
+        ext.resource_bundles = {'SwiftMessages_SwiftMessages' => ['SwiftMessages/Resources/**/*.*']}
 
         # For app extensions, disabling code paths using unavailable API
         ext.pod_target_xcconfig = {

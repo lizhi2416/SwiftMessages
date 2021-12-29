@@ -1,0 +1,16 @@
+PODS:
+  - SwiftMessages/AppExtension (9.0.3)
+
+DEPENDENCIES:
+  - SwiftMessages/AppExtension (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftMessages:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftMessages: 077f19126c24033fe24042237ecc20261adb46e4
+
+PODFILE CHECKSUM: 2eb9a33592d0c52131c37a9dd169a8c4604ffd7b
+
+COCOAPODS: 1.10.1

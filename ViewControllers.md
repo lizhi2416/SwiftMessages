@@ -31,6 +31,24 @@ dismiss(animated: true, completion: nil)
 
 It is not necessary to retain `segue` because it retains itself until dismissal. However, you can retain it if you plan to `perform()` more than once.
 
+#### Present the controller on top of all controllers
+
+If you don't know the presenter or you don't want to pass it as a source, like when you
+have a completely separated message controller, you can pass a `WindowViewController`
+as the `source` argument of the segue's initializer.
+
+By default, the window will be shown in the current window scene at `.normal` window level.
+However, these parameters can be customized by initializing the view controller with a `SwiftMessages.Config` that has the `SwiftMessages.Config.presentationContext` set to either `.window` or `.windowScene`:
+
+```swift
+let destinationVC = ... // make a reference to a destination view controller
+var config = SwiftMessages.defaultConfig
+config.presentationContext = .windowScene(...) // specify the window properties
+let sourceVC = WindowViewController(config: config)
+let segue = SwiftMessagesSegue(identifier: nil, source: self, destination: destinationVC)
+segue.perform()
+```
+
 ### Configuration
 
 `SwiftMessagesSegue` generally requires configuration to achieve specific layouts and optional behaviors. There are a few good ways to do this:
