@@ -122,6 +122,9 @@ open class SwiftMessagesSegue: UIStoryboardSegue {
          */
         case backgroundVertical
     }
+    
+    /// 是否是内部dismiss
+    public var isInternallyHidden = false
 
     /// The presentation style to use. See the SwiftMessages.PresentationStyle for details.
     public var presentationStyle: SwiftMessages.PresentationStyle {
@@ -296,6 +299,7 @@ extension SwiftMessagesSegue: UIViewControllerTransitioningDelegate {
                 if let completeTransition = self.hider.completeTransition {
                     completeTransition(true)
                 } else {
+                    self.isInternallyHidden = true
                     // Case where message is internally hidden by SwiftMessages, such as with a
                     // dismiss gesture, rather than by view controller dismissal.
                     source.dismiss(animated: false, completion: nil)

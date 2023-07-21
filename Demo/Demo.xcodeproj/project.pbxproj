@@ -14,6 +14,7 @@
 		22F27953210D0FDE00273E7F /* ViewControllersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F27952210D0FDE00273E7F /* ViewControllersViewController.swift */; };
 		22FE3FA821193CB90017303D /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FB324121193A3B005C13D9 /* SwiftMessages.framework */; };
 		22FE3FA921193CB90017303D /* SwiftMessages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22FB324121193A3B005C13D9 /* SwiftMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34879E302A6A69C90092DA8B /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34879E2F2A6A69C90092DA8B /* MyTableViewController.swift */; };
 		8642F4361D5F7F540061BDCD /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642F4351D5F7F540061BDCD /* ExploreViewController.swift */; };
 		86AEDCE61D5D1DB70030232E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AEDCE51D5D1DB70030232E /* AppDelegate.swift */; };
 		86AEDCE81D5D1DB70030232E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AEDCE71D5D1DB70030232E /* ViewController.swift */; };
@@ -85,6 +86,7 @@
 		22774C1420B8461900813732 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		22F27952210D0FDE00273E7F /* ViewControllersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersViewController.swift; sourceTree = "<group>"; };
 		22FB323A21193A3B005C13D9 /* SwiftMessages.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftMessages.xcodeproj; path = ../SwiftMessages.xcodeproj; sourceTree = "<group>"; };
+		34879E2F2A6A69C90092DA8B /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		8642F4351D5F7F540061BDCD /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		86AEDCE21D5D1DB70030232E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AEDCE51D5D1DB70030232E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				86C0AB9F1D5E814600F76BD6 /* TacoDialogView.xib */,
 				226FA5E71F5071D0004CB2BC /* CountedMessageView.swift */,
 				226FA5E91F507586004CB2BC /* Utils.swift */,
+				34879E2F2A6A69C90092DA8B /* MyTableViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -200,7 +203,7 @@
 				TargetAttributes = {
 					86AEDCE11D5D1DB70030232E = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = K54N85QB24;
+						DevelopmentTeam = 4YCC4XHF4V;
 						LastSwiftMigration = 1020;
 					};
 				};
@@ -269,6 +272,7 @@
 				226FA5E81F5071D0004CB2BC /* CountedMessageView.swift in Sources */,
 				86AEDCE81D5D1DB70030232E /* ViewController.swift in Sources */,
 				226FA5EA1F507586004CB2BC /* Utils.swift in Sources */,
+				34879E302A6A69C90092DA8B /* MyTableViewController.swift in Sources */,
 				86AEDCE61D5D1DB70030232E /* AppDelegate.swift in Sources */,
 				226FA5E61F506993004CB2BC /* CountedViewController.swift in Sources */,
 				86C0ABA21D5E816600F76BD6 /* TacoDialogView.swift in Sources */,
@@ -427,7 +431,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = K54N85QB24;
+				DEVELOPMENT_TEAM = 4YCC4XHF4V;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,7 +448,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = K54N85QB24;
+				DEVELOPMENT_TEAM = 4YCC4XHF4V;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
